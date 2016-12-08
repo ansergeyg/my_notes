@@ -1,7 +1,7 @@
 # my_notes
 Everything about everything
 #
-Some shit)
+
 0)git clone url (don not use this step)
 
 1)git status

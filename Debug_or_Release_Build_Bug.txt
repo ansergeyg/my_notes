@@ -1,5 +1,14 @@
-So, our head developer refactored the application we are working on and after that every production website built on the application started working with errors that we could not reproducre and therefore to fix.
-We tried to use exactly the same remote database with the build label as on the web server of the website we are investigating in order to match the production environment with our local development environment but this would not help us. On our local machines with production build and remote database connection the website worked with no such errors, however on the actual website the errors would still appear.
-The problem was that we were building our application in the Debug context, whereas on the production web server the application is built in the Release context.
+So, our head developer refactored the application we are working on and after that every production website built 
+on the application started working with errors that we could not reproducre and therefore to fix.
+
+We tried to use exactly the same remote database with the build label as on the web server of the website we are 
+investigating in order to match the production environment with our local development environment but this would not help us. 
+On our local machines with production build and remote database connection the website worked with no such errors, 
+however on the actual website the errors would still appear.
+
+The problem was that we were building our application in the Debug context, whereas on the production web server 
+the application is built in the Release context.
+
 Once we built our application in the Release context we could reproduce the errors.
-As I mentioned, our head developer refactored some classes and make them internal. Somehow the 'internal' access modifier works differently in Debug and Release context in our application. This is weired).
+As I mentioned, our head developer refactored some classes and make them internal. Somehow the 'internal' access modifier 
+works differently in Debug and Release context in our application. This is weired).

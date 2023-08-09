@@ -1,18 +1,13 @@
 # my_notes
-Everything about everything
-#
 
-0)git clone url (don not use this step)
+Remove files from Changes to be committed:
 
-1)git status
+git restore file --staged
 
-2)git add .
+Remove files from Changes not staged for commit:
 
-3)git status
+git checkout file
 
-4)git commit -m "your comment"
+Remove files from Untracked files:
 
-5)git status
-
-4)git push origin master
-
+git clean -f

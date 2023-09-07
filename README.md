@@ -1,7 +1,5 @@
 # Everyday git commands
 
-##Local changes:
-
 ### Remove files from Changes to be committed:
 
 ```git restore filename --staged```

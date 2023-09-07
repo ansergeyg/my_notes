@@ -1,15 +1,15 @@
 # Everyday git commands
 
-### Remove files from Changes to be committed:
+### Remove files from *Changes to be committed:*
 
 ```git restore filename --staged```
 
 
-### Remove files from Changes not staged for commit:
+### Remove files from *Changes not staged for commit:*
 
 ```git checkout filename```
 
-### Remove files from Untracked files:
+### Remove files from *Untracked files:*
 
 ```git clean -f filename```
 

@@ -1,6 +1,6 @@
-# my_notes
+# Everyday git commands
 
-Local changes:
+##Local changes:
 
 ### Remove files from Changes to be committed:
 

@@ -4,7 +4,8 @@ Local changes:
 
 Remove files from Changes to be committed:
 
-git restore filename --staged
+`git restore filename --staged`
+
 
 Remove files from Changes not staged for commit:
 

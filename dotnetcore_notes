@@ -58,5 +58,13 @@ dotnet add to_project reference from_project
 
 DON'T FORGET TO REBUILD AND IF REFERENCES DON'T WORK CLOSE AN REPOEND VSCODE
 
+Now how to run tests?
 
+If you have C# Dev Kit installed then vscode will be automaically find and detect your tests. 
+
+You will actually see a green arrow right next to your test method.
+
+If you don't see it it means that you need to either rebuild or close/open vscode or check if your plugin works properly.
+
+There is also a beaker button in the vertical tool panel you can use it to open tests explorer window.
 

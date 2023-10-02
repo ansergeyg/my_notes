@@ -21,9 +21,9 @@ more .\sln_name.sln
 
 2) Now let's create some projects:
 
-dotnet new classlib -o Project 1
+dotnet new classlib -o Project_1
 
-dotnet new xunit -o Project for tests
+dotnet new xunit -o Project_for_tests
 
 If we try to build what we have now:
 
@@ -47,4 +47,16 @@ It's a convenient way to perform operations on all files or a specific type of f
 Now we can build:
 
 dotnet build
+
+4) Now it's time to add references.
+
+dotnet add reference Project_1 Project_2 ...
+
+Or if you want to specify the project to which you want to add a reference:
+
+dotnet add to_project reference from_project
+
+DON'T FORGET TO REBUILD AND IF REFERENCES DON'T WORK CLOSE AN REPOEND VSCODE
+
+
 

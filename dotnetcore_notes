@@ -1,0 +1,50 @@
+1) When you create a new aspnet project it's better to create it in the following template:
+
+GeneralRepository  (matching yoru git repository name)
+ - Project 1
+ - Project 2
+ ..
+ - Project for tests
+
+Commands:
+
+1) We start from creating a solution file: 
+
+dotnet new sln . 
+
+The . is matching your cloned git repository. Or if you intend to create a subdirectory use dotnet new sln -o _name_
+
+Let's check what's inside of .sln file:
+
+more .\sln_name.sln
+
+
+2) Now let's create some projects:
+
+dotnet new classlib -o Project 1
+
+dotnet new xunit -o Project for tests
+
+If we try to build what we have now:
+
+dotnet build
+
+we will get some warnings.
+
+It's because our projects and our solution exists separately. Let's joing them:
+
+3) dotnet sln add (ls -r **/*.csproj)
+
+ChatGPT:
+
+    **: The double asterisk ** is a recursive glob pattern. It matches zero or more directories and subdirectories. 
+        In other words, it allows you to search through all levels of subdirectories.
+    /*: The forward slash / followed by an asterisk * is used to match all files and directories within the current directory.
+
+When you combine ** with /* as **/*, you get a pattern that matches all files and directories recursively from the current directory and its subdirectories. 
+It's a convenient way to perform operations on all files or a specific type of file (in your case, .csproj files) within a directory tree.
+
+Now we can build:
+
+dotnet build
+

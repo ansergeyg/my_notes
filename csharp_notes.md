@@ -1,3 +1,9 @@
+LANGUAGE VERSIONING:
+
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
+
+
+
 When you have a struct you're not sharing it with anyone
 so it's fine for you to mutate it. You're not hurting anyone else.
 When you have an object that is of a class value it can be shared with someone and be mutated so it has cosequences for others.

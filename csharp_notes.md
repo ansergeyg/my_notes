@@ -13,6 +13,7 @@ dotnet new console -o my_proj_name --framework netcoreapp3.1
 
 
 -----------------------------------------------------------------
+Thoughts on mutating structs or classes:
 
 When you have a struct you're not sharing it with anyone
 so it's fine for you to mutate it. You're not hurting anyone else.

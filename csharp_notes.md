@@ -3,6 +3,12 @@ LANGUAGE VERSIONING:
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
 
 
+How to change framework versions using dotnet command:
+
+dotnet new console -o my_proj_name --framework net7.0
+
+dotnet new console -o my_proj_name --framework netcoreapp3.1
+
 
 When you have a struct you're not sharing it with anyone
 so it's fine for you to mutate it. You're not hurting anyone else.

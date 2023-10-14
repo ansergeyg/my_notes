@@ -23,6 +23,7 @@ dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true
 You will need to re-run this command for each platform (Windows, macOS, Linux) that you want to target:
 
 dotnet publish -c Release -r win-x64 -p:PublishSingleFile=true
+
 dotnet publish -c Release -r osx-x64 -p:PublishSingleFile=true
 
 -p:PublishSingleFile=true produces a single executable that you can copy around and run. You can attach it as an artifact with the release on GitHub.

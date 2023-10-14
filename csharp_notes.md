@@ -13,6 +13,27 @@ dotnet new console -o my_proj_name --framework netcoreapp3.1
 
 
 -----------------------------------------------------------------
+Source: https://stackoverflow.com/questions/61666697/how-to-build-executables-for-specific-platforms-in-net
+
+
+If you are using .NET Core 3.x or later, you can use dotnet publish with various options to produce stand-alone executables:
+
+dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true
+
+You will need to re-run this command for each platform (Windows, macOS, Linux) that you want to target:
+
+dotnet publish -c Release -r win-x64 -p:PublishSingleFile=true
+dotnet publish -c Release -r osx-x64 -p:PublishSingleFile=true
+
+-p:PublishSingleFile=true produces a single executable that you can copy around and run. You can attach it as an artifact with the release on GitHub.
+
+(Aside: This executable will automatically extract itself into a few dozen files and then run that version. That means that you wont be able to run it, for example, on a system without a disk that you can write to.)
+
+And yes, you can definitely wrap this up in a Makefile or something. Here's an example from a cli tool that I work on:
+
+
+-----------------------------------------------------------------
+
 Thoughts on mutating structs or classes:
 
 When you have a struct you're not sharing it with anyone

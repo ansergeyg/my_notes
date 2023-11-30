@@ -3,4 +3,5 @@ I faced this issue several times. It turns out that if you really checked your s
 your environment affects the overall script exection in your system. It basically means there is another script (somewhere deep in your system, or vedor) that does something to the tag that you were working with.
 The debug approach is pretty straight-forward. You need to find the way to disable .js files one by one loaded on the page you have the problem.
 Ok, this way we can isolate a problem to a single file, but what is the actual problem causing your tag to behave differently?
-Imagine that in another file someone was searching for a tag (your tag) and replacing some text in it.
+Imagine that in another file someone was searching for a tag (your tag) and replacing some text in it. Looks like a pretty common task, right?
+It turns out changing content/text of a tag is not trivial and there are specifics you should know.

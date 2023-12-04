@@ -16,3 +16,25 @@ my hardware would be fully supported by that virtual machine or ROCm!
 So the real question: Is my hardware fully supported by ROCm?
 
 One last option is to follow amd ROCm installation guide for Windows OS and hope ROCm may support my hardware as well.
+
+UPDATE:
+
+It was very hard to find the exact characteristics of my integrated GPU.
+
+But this source helped:
+
+Even thought (not entirely reliable but checks out if you look up on the internet).
+
+https://www.quora.com/Is-Vega-8-and-Vega-Mobile-Gfx-2-10-GHz-the-same-I-have-laptop-and-it-said-it-had-a-Radeon-Vega-8-but-when-I-see-the-PC-components-the-graphics-card-appeares-as-Vega-Mobile-Gfx-2-10-GHz-Are-these-the-same-thing
+
+Characteristics: Processor AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx, 2100 Mhz, 4 Core(s), 8 Logical Processor(s) 
+
+Radeon Vega Mobile Gfx - is actually Vega 8 or GCN 5.
+
+Checking with official amd gpu support documentation:
+
+https://rocm.docs.amd.com/en/latest/release/gpu_os_support.html
+
+the last supported gpu architecture is GCN 5.1
+
+Goddamn it. Will try to use google colab for now.

@@ -18,5 +18,4 @@ To fix it:
 6) chmod 0440 /etc/sudoers
    (Setting permissions may not be necessary)
 7) shutdown/start
-Hello World! as the terminal response!
 8) Open terminal and check if sudo works

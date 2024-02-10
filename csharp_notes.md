@@ -11,6 +11,17 @@ dotnet new console -o my_proj_name --framework net7.0
 
 dotnet new console -o my_proj_name --framework netcoreapp3.1
 
+-----------------------------------------------------------------
+
+Disable verbose logging of symbol loading in vscode debug console :
+
+```cs
+"logging": {
+    "moduleLoad": false
+}
+```
+
+https://stackoverflow.com/questions/55683834/disable-verbose-logging-of-symbol-loading-in-vscode-debug-console
 
 -----------------------------------------------------------------
 Source: https://stackoverflow.com/questions/61666697/how-to-build-executables-for-specific-platforms-in-net

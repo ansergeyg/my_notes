@@ -1,3 +1,31 @@
+cs```
+        public static void myMthedo()
+        {
+            int a1 = 4;
+            int a2 = 8;
+
+            // We cannot use ref/out with Action types so this doesn't work
+            Action<int, int> swap2 = (int a, int b) => { int t = a; a = b; b = t; };
+            swap2(a1, a2);
+
+            // swap(ref a1, ref a2);
+            Console.WriteLine("a1={0} a2={1}", a1, a2);                
+
+            //Local method inside method
+            void swap(ref int a, ref int b)
+            {
+                int t = a;
+                a = b;
+                b = t;
+            }
+        }
+```
+
+
+-----------------------------------------------------------------
+
+
+
 LANGUAGE VERSIONING:
 
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
@@ -6,6 +34,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-lan
 
 
 How to change framework versions using dotnet command:
+
 
 dotnet new console -o my_proj_name --framework net7.0
 

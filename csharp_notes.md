@@ -1,5 +1,5 @@
 ```cs
-        public static void myMthedo()
+        public static void myMethod()
         {
             int a1 = 4;
             int a2 = 8;
@@ -8,7 +8,9 @@
             Action<int, int> swap2 = (int a, int b) => { int t = a; a = b; b = t; };
             swap2(a1, a2);
 
-            // swap(ref a1, ref a2);
+            // This works    
+            swap(ref a1, ref a2);
+
             Console.WriteLine("a1={0} a2={1}", a1, a2);                
 
             //Local method inside method

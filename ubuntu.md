@@ -1,3 +1,5 @@
+***If sudo doesn't work on linux:***
+
 After installing ubuntu 20.4 in virtual box the terminal may not work. It just cannot be open due to some reason.
 
 To fix it, you need to open Regional settings and change language to any other language. After that you need to reboot.

@@ -45,8 +45,9 @@ To create the docker group and add your user:
 
 Create the docker group.
 
-
+```
  sudo groupadd docker
+```
 Add your user to the docker group.
 
 

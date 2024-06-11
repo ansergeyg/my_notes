@@ -49,3 +49,5 @@ If you're using composer you can run command:
 ```
 composer why some_repo/some_module
 ```
+You need to compare allowed versions among all packages that use your dependency package. In this case **mdf/psr-http-message-shim** wasn't really compatible with the lower version of the
+***psr/http-message*** package.

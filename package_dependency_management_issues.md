@@ -1,3 +1,7 @@
+**Nuget package manager notes:**
+
+**Composer package manager notes:**
+
 Sometimes when you install a new package/module you may face dependency incompatibility issues.
 
 Example:
@@ -51,3 +55,18 @@ composer why some_repo/some_module
 ```
 You need to compare allowed versions among all packages that use your dependency package. In this case **mdf/psr-http-message-shim** wasn't really compatible with the lower version of the
 ***psr/http-message*** package.
+
+
+Ever wondered if you could patch composer.json file itself?
+
+For example, we could fix the problem above by editing some composer.json file in one of the packages above.
+
+Turns out it's impossible right now:
+
+Because patching occurs after Composer calculates dependencies and installs packages, changes to an underlying dependency's composer.json file introduced in a patch will have no effect on installed packages.
+
+If you need to modify a dependency's composer.json or its underlying dependencies, you cannot use this plugin. Instead, you must do one of the following:
+
+Work to get the underlying issue resolved in the upstream package.
+Fork the package and specify your fork as the package repository in your root composer.json
+Specify compatible package version requirements in your root composer.json

@@ -10,3 +10,7 @@ but it can take longer than that. Once Google's resources allow, a headless Chro
 Googlebot parses the rendered HTML for links again and queues the URLs it finds for crawling. Google also uses the rendered HTML to index the page.
 
 Keep in mind that server-side or pre-rendering is still a great idea because it makes your website faster for users and crawlers, and not all bots can run JavaScript.
+
+Google and Bing can run javacript but it takes longer than ususal.
+
+https://webmasters.stackexchange.com/questions/140250/do-search-engines-perform-js-rendering-while-crawling

@@ -70,3 +70,13 @@ If you need to modify a dependency's composer.json or its underlying dependencie
 Work to get the underlying issue resolved in the upstream package.
 Fork the package and specify your fork as the package repository in your root composer.json
 Specify compatible package version requirements in your root composer.json
+
+----------------------------------------------
+
+Sometimes when you update the direct dependencies the build may still not work causing errors in some places in the code where you wouldn't even consider to be broken after the updates.
+However, you should consider the fact that some other dependencies may interact with core functionalities (extending them/modifying them) that are used by the dependencies that you are trying to update.
+
+Example:
+
+We are trying to update the module media_a_portal. While updating it we face issue with build. There is an error thrown by the dependency injector (injecting logger). 
+Turns out there is another module monlog that extends core logger and the older version of it causes this issue.

@@ -27,11 +27,15 @@ Scenario 2:
      
      docker ps -a
      ```
-   - ```
+     ```
      # now if you can see the container you can run:
      
      docker logs -f --details container_id
      ```
+     If you have docker compose plugin then you can check all logs:
+      ```
+         docker compose logs -f
+      ```
 
 2) One of the common reasons is you ran out of **disk space**. It's easily fixable. Just clean up your disk space or increase it if you can.
 

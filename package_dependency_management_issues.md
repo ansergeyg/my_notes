@@ -84,7 +84,9 @@ Turns out there is another module monlog that extends core logger and the older 
 ----------------------------------------------
 If the manifest and repository location has changed for one of your packages and you changed composer.json file
 
-be sure to run composer udpate severl times (with or without clearing composer cache). Because You may face inconsistencies at this point.
+be sure to run composer udpate several times (with or without clearing composer cache). Because You may face inconsistencies at this point.
+
+Even though composer may show you that it was installing your package, the package may not be there.
 
 How to make sure that your package is still working with composer?
 
@@ -92,4 +94,4 @@ Just run:
 
 composer show | grep your_package.
 
-You should see it in the registry. If not, then obviousely you need to clear cache and run composer update server times.
+You should see it in the registry. If not, then try to make sure that pacakge is installed by running composer update few times or clearing composer cache.

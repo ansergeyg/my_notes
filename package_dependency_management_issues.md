@@ -80,3 +80,16 @@ Example:
 
 We are trying to update the module media_a_portal. While updating it we face issue with build. There is an error thrown by the dependency injector (injecting logger). 
 Turns out there is another module monlog that extends core logger and the older version of it causes this issue.
+
+----------------------------------------------
+If the manifest and repository location has changed for one of your packages and you changed composer.json file
+
+be sure to run composer udpate severl times (with or without clearing composer cache). Because You may face inconsistencies at this point.
+
+How to make sure that your package is still working with composer?
+
+Just run:
+
+composer show | grep your_package.
+
+You should see it in the registry. If not, then obviousely you need to clear cache and run composer update server times.

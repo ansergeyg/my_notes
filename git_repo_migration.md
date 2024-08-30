@@ -22,7 +22,7 @@ git pull to_repository
 git branch (you should see all the branches from both repositories)
 ```
 
-make your changes and save them in stage
+4) make your changes and save them in stage
 
 ```
 git add
@@ -35,4 +35,7 @@ git push to_repository
 
 Migrate tags:
 
-Basically the same
+Basically first 3 steps above are the same, but the 4 step:
+
+```
+```

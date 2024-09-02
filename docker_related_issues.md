@@ -48,3 +48,27 @@ Scenario 2:
 
 So you need to check if they were cleaned up.
   
+Useful commands to run:
+
+```
+if you cannot remove valumes because you tried to remove images/containers/volumes while containers were running try this:
+
+docker volume prune --filter all=1
+
+One way to remove dangling images:
+
+docker image ls --filter dangling=true -q
+
+Other way to remove dangling images
+
+docker image rm -f $(docker image ls --filter dangling=true -q)
+
+Untag and delete docker images
+
+docker image rm $(docker images --filter since=b721d1cdaac7 -q) -f
+and then run
+docker image rm -f $(docker image ls -a -q)
+
+docker system df  - shows resources taken by docker (images/volumes/containers)
+
+```

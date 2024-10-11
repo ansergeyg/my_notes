@@ -11,7 +11,7 @@
 
 ### Remove files from *Untracked files:*
 
-```git clean -f filename```
+```git clean -f filename or leave empty to delete all untracked files```
 
 
 ### Change latest pushed commit:

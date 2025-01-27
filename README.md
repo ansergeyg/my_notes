@@ -23,3 +23,21 @@
 3) ```git commit -m "Your comment"```
 
 4) ```git push -f origin your branch```
+
+## Git reset
+ 
+Use git reflog to see all manipulations you did locally with git commit history.
+
+```git reflog```
+
+### Cancel git reset command
+
+Find the proper commit in git reflog you want to move to and then run:
+
+```git reset commit-hash```
+
+or
+
+```git reset HEAD@{N}```
+
+where *N* is a number you see in git reflog. Example: HEAD@{0}

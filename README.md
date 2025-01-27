@@ -30,6 +30,16 @@ Use git reflog to see all manipulations you did locally with git commit history.
 
 ```git reflog```
 
+### Switch to a specific commit
+
+```git reset HEAD~N```
+
+Where *N* is a number of commits that will be cut from the HEAD
+
+or
+
+```git reset commit-hash```
+
 ### Cancel git reset command
 
 Find the proper commit in git reflog you want to move to and then run:

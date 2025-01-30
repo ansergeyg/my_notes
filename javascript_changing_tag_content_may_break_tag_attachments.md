@@ -1,3 +1,11 @@
+Actual problem:
+
+Modifying innerHTML causes the content to be re-parsed and DOM nodes to be recreated, losing the handlers you have attached. Appending elements as in the first example doesn't cause that behavior, so no re-parsing has to occur, since you are modify the DOM tree explicitly.
+
+Another good way to handle this is to use insertAdjacentHTML(). For example:
+
+```document.body.insertAdjacentHTML('beforeend', '<br>')```
+
 Sometimes if you create a tag element in javascript and then you attach some even listener to it (for example, click) the event doesn't work.
 I faced this issue several times. It turns out that if you really checked your script in an isolated environment (for example, jsfiddle, but can be anything) and it was working, it REALLY means that
 your environment affects the overall script exection in your system. It basically means there is another script (somewhere deep in your system, or vedor) that does something to the tag that you were working with.

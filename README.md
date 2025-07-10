@@ -51,3 +51,17 @@ or
 ```git reset HEAD@{N}```
 
 where *N* is a number you see in git reflog. Example: HEAD@{0}
+
+### Divergent branch issue
+
+Say, you were in the develop branch and then commited some changes and after that created a new branch.
+
+When you get back to the develop branch and run git pull, you get the "divergent branches" issue.
+
+You cannot really rebase or fast-forward because you local branch has commits that are not present in the remote branch AND the remote branch has some changes that are not present in you local branch.
+
+In this situation, you can just run 
+
+```git reset --hard origin/develop```
+
+to reset your branch to develop. You don't care about the local commits because they are saved in the new branch that you had already created and worked on. 

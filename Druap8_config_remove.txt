@@ -1,1 +1,5 @@
+Global config overrides issue with Mutable Config:
 
+https://www.drupal.org/project/drupal/issues/2976964
+
+https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-override-system

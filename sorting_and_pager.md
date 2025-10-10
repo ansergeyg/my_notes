@@ -16,7 +16,7 @@ page 1       page 2
 
 ```
 
-If you're not attentive enough it is easy to miss this problem on a **larger** set of data.
+If you're not attentive enough it is easy to miss this problem on a **larger** set of data. And this is important because you don't **show all the data** now.
 
 The reason is that almost all databases do not guarantee any ordering of selected data if you don't sepcify it explicitly (using order by clause, for example).
 

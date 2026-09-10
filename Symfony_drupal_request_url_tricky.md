@@ -6,8 +6,11 @@ caller is working on.
 
 Clear examples: CLI call or http level call.
 
-In this specific case CLI call falls back to **http**,
-whereas browser UI call uses **https**
+Imagine that hou have queues that run httprequest to some external sever. After that our server is expecting responses from that external server.
+
+In this specific case CLI call (when automatic cron runs) falls back to **http**,
+
+whereas browser UI call (when we manually run cron or queue) uses **https**
 
 # Why automatic cron generated HTTP callback URLs
 

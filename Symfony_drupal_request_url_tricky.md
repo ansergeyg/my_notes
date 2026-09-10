@@ -150,7 +150,6 @@ both runs; it is separate from the callback URLs supplied inside the payload.
 Exact replacement in PService.php:
 
 ~~~php
-    // eTranslation callbacks must use the public HTTPS endpoint.
     $this->host = 'https://' . $this->request->getCurrentRequest()->getHttpHost();
 ~~~
 
